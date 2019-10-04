@@ -12,6 +12,9 @@
           <li class="nav-item">
             <router-link class="nav-link" :to="{name: 'Build'}" exact>Build</router-link>
           </li>
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{name: 'BrowseParts'}" exact>Parts</router-link>
+          </li>
           <li class="nav-item cart">
             <router-link class="nav-link" to="/cart" exact>Cart</router-link>
             <div class="cart-items">{{cart.length}}</div>
@@ -35,7 +38,7 @@ export default {
   name: 'app',
   computed: {
     cart() {
-      return this.$store.state.cart;
+      return this.$store.state.robots.cart;
     },
   },
 };

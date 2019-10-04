@@ -15,6 +15,7 @@ export default {
     signIn({ commit }) {
       axios.post('/api/sign-in')
         .then(result => commit('updateCurrentUser', result.data))
+        // eslint-disable-next-line no-console
         .catch(console.error);
     },
   },

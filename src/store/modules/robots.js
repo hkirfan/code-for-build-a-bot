@@ -18,6 +18,7 @@ export default {
     getParts({ commit }) {
       axios.get('/api/parts')
         .then(result => commit('updateParts', result.data))
+        // eslint-disable-next-line no-console
         .catch(console.error);
     },
     addRobotToCart({ commit, state }, robot) {
